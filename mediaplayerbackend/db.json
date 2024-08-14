@@ -1,56 +1,48 @@
 {
   "videos": [
     {
-      "videoId": "1",
       "caption": "Guppy | Thaniye",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3f/Guppy_film_poster.jpg",
       "youtubeLink": "https://www.youtube.com/embed/l0yU-mcCM9I",
       "id": 1
     },
     {
-      "videoId": "2",
       "caption": "K.G.F | Salaam Rocky",
       "imageUrl": "https://imgs.search.brave.com/Xj0CI7hrnoEOtWCXRopdQWuuQe5jMyNLzYrqdq5FtSs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmlsbWliZWF0/LmNvbS9waC1iaWcv/MjAyMi8wMy9rZ2Yt/Y2hhcHRlci0yXzE2/NDc4NDg1OTcwMC5q/cGc",
       "youtubeLink": "https://www.youtube.com/embed/42vgx97trM4",
       "id": 2
     },
     {
-      "videoId": "3",
       "caption": "Goat | Spark",
       "imageUrl": "https://c.saavncdn.com/220/Spark-From-Thalapathy-Is-The-G-O-A-T-Hindi-2024-20240803121025-500x500.jpg",
       "youtubeLink": "https://www.youtube.com/embed/NG0ei6rihQ8",
       "id": 3
     },
     {
-      "videoId": "4",
       "caption": "Lucifer | Raftaara",
       "imageUrl": "https://imgs.search.brave.com/hzwA6fBlRXN6QdFwjU6CM6D39r4PI6z349TsvyGfyMg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jLnNh/YXZuY2RuLmNvbS8z/ODcvTHVjaWZlci1N/YWxheWFsYW0tMjAx/OS0yMDE5MDUwMzAw/MjkyNi01MDB4NTAw/LmpwZw",
       "youtubeLink": "https://www.youtube.com/embed/Ymlxgab2gW8",
       "id": 4
     },
     {
-      "videoId": "5",
       "caption": "Illuminati | Aavesham ",
       "imageUrl": "https://c.saavncdn.com/858/Aavesham-Malayalam-2024-20240514204401-500x500.jpg",
       "youtubeLink": "https://www.youtube.com/embed/tOM-nWPcR4U",
       "id": 5
     },
     {
-      "videoId": "6",
       "caption": "RRR | Dosti",
       "imageUrl": "https://c.saavncdn.com/385/Rrr-Hindi-2022-20220416081050-500x500.jpg",
       "youtubeLink": "https://www.youtube.com/embed/k157GjJHvK4",
       "id": 6
     },
     {
-      "videoId": "7",
       "caption": "King of Kotha - Kalapakkaara Video",
       "imageUrl": "https://imgs.search.brave.com/pRymfYOv1oCGMmWlITYYcDoPV4JMplFT0jqdlZHvkA0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/Ny83ZC9LaW5nLW9m/LUtvdGhhLmpwZy81/MTJweC1LaW5nLW9m/LUtvdGhhLmpwZw",
       "youtubeLink": "https://www.youtube.com/embed/VzT2xurZrbI",
       "id": 7
     },
     {
-      "videoId": "8",
       "caption": "JAILER - Hukum ",
       "imageUrl": "https://imgs.search.brave.com/CRRsVxV0vXoDl3-fKWhKWf1r3aGEApHAAuwZY68jNt0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMy5h/bWF6b25hd3MuY29t/L3N0YXRpYy5yb2dl/cmViZXJ0LmNvbS91/cGxvYWRzL21vdmll/L21vdmllX3Bvc3Rl/ci9qYWlsZXItMjAy/My9sYXJnZV9qYWls/ZXItbW92aWUtcG9z/dGVyLTIwMjMuanBn",
       "youtubeLink": "https://www.youtube.com/embed/1F3hm6MfR1k",
