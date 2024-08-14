@@ -8,11 +8,11 @@ import React from "react";
 import { UploadVideo } from "../services/AllApi";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 function Add({status}) {
 	const [show, setShow] = useState(false);
 	// state to store all form field values
 	const [videoDetails, SetVideoDetails] = useState({
-		videoId: '',
 		caption: '',
 		imageUrl: '',
 		youtubeLink: ''
@@ -21,16 +21,16 @@ function Add({status}) {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 	const addVideoDetails = async () => {
-		const { videoId, caption, imageUrl, youtubeLink } = videoDetails
+		const {caption, imageUrl, youtubeLink } = videoDetails
 		
 
-			if(!videoId || !caption || !imageUrl || !youtubeLink){
+			if(!caption || !imageUrl || !youtubeLink){
 				toast.warning("Please Fill the Form Completely ")
 			} else {
 				console.log("final data")
 				console.log(videoDetails)
 				const response = await UploadVideo(videoDetails);
-				console.log(response)
+				console.log(response);
 				if (response.status === 201) {
 					status(response.data)
 					toast.success(`${response.data.caption} successfully uploaded`);
@@ -72,9 +72,7 @@ function Add({status}) {
 				<Modal.Body>
 					<p className="textStyle">Please Fill The Form</p>
 					<Form className="border border-secondary p-3 rounded" data-bs-theme="light">
-						<Form.Group className="mb-3" controlId="formBasicEmail">
-							<Form.Control type="text" placeholder="Enter Video Id" onChange={(e)=> SetVideoDetails({...videoDetails,videoId:e.target.value})} />
-						</Form.Group>
+						
 						<Form.Group className="mb-3" controlId="formBasicEmail">
 							<Form.Control type="text" placeholder="Enter Video Caption" onChange={(e)=> SetVideoDetails({...videoDetails,caption:e.target.value})} />
 						</Form.Group>

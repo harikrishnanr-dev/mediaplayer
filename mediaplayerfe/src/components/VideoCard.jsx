@@ -4,12 +4,26 @@ import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
+import { deleteVideo } from "../services/AllApi";
+import { toast, ToastContainer } from "react-toastify";
 
 function VideoCard({ displayVideo }) {
     const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const deleteVideoItem = async(id) => {
+    const response = await deleteVideo(id)
+    console.log("response=========");
+    console.log(response);
+    if (response.status === 200) {
+      toast.success("Successfully deleted the Video")
+    }
+    else {
+      toast.error("Something Went Wrong")
+    }
+    
+  }
     return (
         <>
         
@@ -19,7 +33,7 @@ function VideoCard({ displayVideo }) {
                 <Card.Body>
                         <div className='d-flex justify-content-between'>
                             <Card.Title >{displayVideo.caption.slice(0,20) }...</Card.Title>
-                            <Button variant="danger"><FontAwesomeIcon icon={faTrash }/></Button>
+              <Button variant="danger"  onClick={()=>deleteVideoItem(displayVideo.id)}><FontAwesomeIcon icon={faTrash}   /></Button>
                         </div>
                 </Card.Body>
             </Card>
@@ -42,7 +56,8 @@ function VideoCard({ displayVideo }) {
           </Button>
           <Button variant="primary">Understood</Button>
         </Modal.Footer>
-      </Modal>
+        </Modal>
+        <ToastContainer/>
         </>
     )
 }
