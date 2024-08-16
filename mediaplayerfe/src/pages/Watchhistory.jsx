@@ -1,9 +1,27 @@
 import { faArrowLeft, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { deleteHistory, getHistory } from '../services/AllApi'
+
 
 function Watchhistory() {
+  const [allHistory, setAllHistory] = useState([])
+  const getWatchHistory = async () => {
+    const { data } = await getHistory();
+    console.log(data);
+    setAllHistory(data);
+    
+  }
+  useEffect(() => {
+    getWatchHistory(allHistory)
+  }, [])
+  //Delete history videos
+  const handleDelete = async (historyId) => {
+    await deleteHistory(historyId)
+    getWatchHistory();
+  }
+
   return (
     <>
       <div className='container d-flex mt-5 justify-content-between mb-5'>
@@ -24,16 +42,25 @@ function Watchhistory() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>neela</td>
-            <td>https:///hiudsisiohohvjo</td>
-            <td>4455</td>
-            <td><FontAwesomeIcon icon={faTrash}/></td>
-          </tr>
-        </tbody>
+          {
+          allHistory.length > 0 ?
+          allHistory.map((item) => (
+      <tr>
+        <td>{item.id}</td>
+        <td>{item.caption}</td>
+        <td>{item.url}</td>
+              <td>{item.timeStamp}</td>
+        <td><FontAwesomeIcon icon={faTrash} onClick={() => handleDelete(item?.id)} /></td>
+        </tr>
+    ))
+    :
+<p>NO Item Found</p>
+    
+}
+</tbody>
       </table>
-    </>)
+    </>
+  )
 }
 
 export default Watchhistory

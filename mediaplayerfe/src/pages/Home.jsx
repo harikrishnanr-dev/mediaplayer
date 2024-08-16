@@ -23,7 +23,7 @@ function Home() {
       </div>
 
     
-    <div className='category'>
+    <div className='category col-md-3'>
       <Category/>
     </div>
     </div>

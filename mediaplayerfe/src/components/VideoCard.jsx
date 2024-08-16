@@ -4,19 +4,44 @@ import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
-import { deleteVideo } from "../services/AllApi";
-import { toast, ToastContainer } from "react-toastify";
+import { addToHistory, deleteVideo } from "../services/AllApi";
+import { toast } from "react-toastify";
 
-function VideoCard({ displayVideo }) {
-    const [show, setShow] = useState(false);
-
+function VideoCard({ displayVideo, setDeleteVideoStatus }) {
+  
+  const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = async () => {
+    // watch History Time
+    const today = new Date();
+    const timeStamp = new Intl.DateTimeFormat('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    }).format(today);
+    console.log(timeStamp);
+   
+    const reqBody = {
+      url: displayVideo.youtubeLink,
+      caption: displayVideo.caption,
+      timeStamp: timeStamp
+    };
+   
+    await addToHistory(reqBody);
+    setShow(true);
+  };
+  
+  
+  //for delete
   const deleteVideoItem = async(id) => {
     const response = await deleteVideo(id)
     console.log("response=========");
     console.log(response);
     if (response.status === 200) {
+      setDeleteVideoStatus(true)
       toast.success("Successfully deleted the Video")
     }
     else {
@@ -57,7 +82,6 @@ function VideoCard({ displayVideo }) {
           <Button variant="primary">Understood</Button>
         </Modal.Footer>
         </Modal>
-        <ToastContainer/>
         </>
     )
 }
