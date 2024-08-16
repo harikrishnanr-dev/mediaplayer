@@ -94,7 +94,7 @@ function Add({status}) {
 					</Button>
 				</Modal.Footer>
 			</Modal>
-			<ToastContainer />
+			<ToastContainer position='top-center' theme='colored' autoClose={2000} />
 		</>
 	);
 }

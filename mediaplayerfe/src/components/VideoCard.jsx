@@ -42,7 +42,7 @@ function VideoCard({ displayVideo, setDeleteVideoStatus }) {
     console.log(response);
     if (response.status === 200) {
       setDeleteVideoStatus(true)
-      toast.success("Successfully deleted the Video")
+      toast.warning("Successfully deleted the Video")
     }
     else {
       toast.error("Something Went Wrong")
