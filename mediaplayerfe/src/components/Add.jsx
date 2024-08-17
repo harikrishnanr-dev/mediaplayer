@@ -21,10 +21,10 @@ function Add({status}) {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 	const addVideoDetails = async () => {
-		const {caption, imageUrl, youtubeLink } = videoDetails
+		const {caption, youtubeLink } = videoDetails
 		
 
-			if(!caption || !imageUrl || !youtubeLink){
+			if(!caption || !youtubeLink){
 				toast.warning("Please Fill the Form Completely ")
 			} else {
 				console.log("final data")
@@ -46,9 +46,11 @@ function Add({status}) {
 	}
 	const getEmbededLink = (data) => {
 		console.log("========emebeded======");
+		
+		const link2 =`https://i.ytimg.com/vi/${data.slice(-11)}/maxresdefault.jpg`
 		const link=`https://www.youtube.com/embed/${data.slice(-11)}`
 		console.log(link);
-		SetVideoDetails({...videoDetails,youtubeLink: link})
+		SetVideoDetails({...videoDetails,imageUrl:link2,youtubeLink: link})
 	}
 	return (
 		<>
@@ -76,9 +78,9 @@ function Add({status}) {
 						<Form.Group className="mb-3" controlId="formBasicEmail">
 							<Form.Control type="text" placeholder="Enter Video Caption" onChange={(e)=> SetVideoDetails({...videoDetails,caption:e.target.value})} />
 						</Form.Group>
-						<Form.Group className="mb-3" controlId="formBasicEmail">
+						{/* <Form.Group className="mb-3" controlId="formBasicEmail">
 							<Form.Control type="text" placeholder="Enter Video Thumbnail Url" onChange={(e)=> SetVideoDetails({...videoDetails,imageUrl:e.target.value})}/>
-						</Form.Group>
+						</Form.Group> */}
 						<Form.Group className="mb-3" controlId="formBasicEmail">
 							<Form.Control type="text" placeholder="Enter Youtube Video LInk" onChange={(e)=>getEmbededLink(e.target.value)}  />
 							

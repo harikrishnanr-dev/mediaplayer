@@ -47,6 +47,18 @@
       "imageUrl": "https://imgs.search.brave.com/CRRsVxV0vXoDl3-fKWhKWf1r3aGEApHAAuwZY68jNt0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMy5h/bWF6b25hd3MuY29t/L3N0YXRpYy5yb2dl/cmViZXJ0LmNvbS91/cGxvYWRzL21vdmll/L21vdmllX3Bvc3Rl/ci9qYWlsZXItMjAy/My9sYXJnZV9qYWls/ZXItbW92aWUtcG9z/dGVyLTIwMjMuanBn",
       "youtubeLink": "https://www.youtube.com/embed/1F3hm6MfR1k",
       "id": 8
+    },
+    {
+      "caption": "Maari 2 - Rowdy Baby ",
+      "imageUrl": "https://i.ytimg.com/vi/x6Q7c9RyMzk/maxresdefault.jpg",
+      "youtubeLink": "https://www.youtube.com/embed/x6Q7c9RyMzk",
+      "id": 9
+    },
+    {
+      "caption": "Vaazha Anthem - Video |Vaazha |Nomadic Voice | Vipin Das | Anand Menen | Siju Sunny | Joemon Jyothir",
+      "imageUrl": "https://i.ytimg.com/vi/v_SLNFmg2lc/maxresdefault.jpg",
+      "youtubeLink": "https://www.youtube.com/embed/v_SLNFmg2lc",
+      "id": 10
     }
   ],
   "history": [
@@ -55,7 +67,65 @@
       "caption": "Guppy | Thaniye",
       "timeStamp": "08/16/2024, 01:02:23 PM",
       "id": 1
+    },
+    {
+      "url": "https://www.youtube.com/embed/42vgx97trM4",
+      "caption": "K.G.F | Salaam Rocky",
+      "timeStamp": "08/16/2024, 04:24:26 PM",
+      "id": 2
+    },
+    {
+      "url": "https://www.youtube.com/embed/NG0ei6rihQ8",
+      "caption": "Goat | Spark",
+      "timeStamp": "08/16/2024, 04:24:50 PM",
+      "id": 3
+    },
+    {
+      "url": "https://www.youtube.com/embed/k157GjJHvK4",
+      "caption": "RRR | Dosti",
+      "timeStamp": "08/16/2024, 04:25:08 PM",
+      "id": 4
+    },
+    {
+      "url": "https://www.youtube.com/embed/42vgx97trM4",
+      "caption": "K.G.F | Salaam Rocky",
+      "timeStamp": "08/17/2024, 10:41:30 AM",
+      "id": 5
+    },
+    {
+      "url": "https://www.youtube.com/embed/j2rNg-7iGsq",
+      "caption": "Tauba Tauba | Bad Newz |",
+      "timeStamp": "08/17/2024, 02:18:47 PM",
+      "id": 6
+    },
+    {
+      "url": "https://www.youtube.com/embed/1F3hm6MfR1k",
+      "caption": "JAILER - Hukum ",
+      "timeStamp": "08/17/2024, 02:18:58 PM",
+      "id": 7
+    },
+    {
+      "url": "https://www.youtube.com/embed/x6Q7c9RyMzk",
+      "caption": "Maari 2 - Rowdy Baby ",
+      "timeStamp": "08/17/2024, 02:41:35 PM",
+      "id": 8
     }
   ],
-  "category": []
+  "category": [
+    {
+      "categoryName": "Malayalam",
+      "allVideos": [],
+      "id": 2
+    },
+    {
+      "categoryName": "English",
+      "allVideos": [],
+      "id": 3
+    },
+    {
+      "categoryName": "Tamil",
+      "allVideos": [],
+      "id": 5
+    }
+  ]
 }

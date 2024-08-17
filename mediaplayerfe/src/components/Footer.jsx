@@ -76,7 +76,7 @@ function Footer() {
 						<button className="btn btn-warning ms-2">Subscribe</button>
 					</div>
 						<div className=" d-flex justify-content-evenly align-items-center mt-3">						
-							<Link to='https://www.instagram.com/' target="_blank"><FontAwesomeIcon icon={faInstagram} size='2x' style={{borderRadius: '5px',background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%' ,fontSize:'1.5rem', color: 'white', padding:'4px'}}/></Link>
+							<Link to='https://www.instagram.com/' target="_blank"><FontAwesomeIcon icon={faInstagram} size='2x' style={{borderRadius: '5px',background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%' , color: 'white', padding:'4px'}}/></Link>
 							<Link to='https://www.facebook.com/' target="_blank"><FontAwesomeIcon icon={faSquareFacebook} size='2x' style={{color: "#2168e4"}} /></Link>
 							<Link to='https://www.x.com/' target="_blank"><FontAwesomeIcon icon={faXTwitter} size='2x' style={{color:'white'}}/></Link>
 							<Link to='https://www.reddit.com/' target="_blank"><FontAwesomeIcon icon={faReddit} size='2x' style={{color:'#ff0000'}}/></Link>

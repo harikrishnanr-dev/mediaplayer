@@ -53,8 +53,7 @@ function Watchhistory() {
         <td><FontAwesomeIcon icon={faTrash} onClick={() => handleDelete(item?.id)} /></td>
         </tr>
     ))
-    :
-<p>NO Item Found</p>
+    :<p>NO Item Found</p>
     
 }
 </tbody>
