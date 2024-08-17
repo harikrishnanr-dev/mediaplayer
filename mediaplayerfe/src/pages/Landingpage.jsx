@@ -126,7 +126,7 @@ function Landingpage() {
 								height="400"
 								src="https://www.youtube.com/embed/NG0ei6rihQ8"
 								title="Spark (Lyrical Video) Tamil |The GOAT| Thalapathy Vijay | Venkat Prabhu |Yuvan Shankar Raja|T-Series"
-								frameborder="0"
+								frameorder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 								referrerpolicy="strict-origin-when-cross-origin"
 								allowfullscreen

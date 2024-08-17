@@ -12,12 +12,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Category() {
   const [show, setShow] = useState(false);
-  const [categoryName, setCategoryName] = useState({});
+  const [categoryName, setCategoryName] = useState();
   const [allCategory,setAllCategory] = useState([]);
     
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+ // Function to handle the 'Enter' key press in the input field
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
@@ -26,8 +27,7 @@ function Category() {
   }
   
   const handleaddCategory = async() => {
-    
-    if (!categoryName) {
+    if (!categoryName) { // Check if the category name is empty
         alert("Please Fill the Form")
       }
     else {
@@ -35,11 +35,13 @@ function Category() {
         categoryName:categoryName,
         allVideos:[],
       }
-      const response = await addCategory(body);
+      const response = await addCategory(body);// Call the API to add the category
       if (response.status == 201) {
         toast.success(`${categoryName} Successfully Added`);
         handleClose();
         setCategoryName("");
+        //to update the list of categories
+        getCategory(); 
       }
       else {
         toast.error("Something Went Wrong")
@@ -47,10 +49,12 @@ function Category() {
       }
     }
   }
+
+  // Function to fetch/Display all categories from the backend
   const getCategory = async ()=> {
-    const response = await getAllCategory();
-    const{data} = response;
-    setAllCategory(data);
+    const response = await getAllCategory();// Call the API to view the category
+    const{data} = response; //Destructure the data from the response
+    setAllCategory(data); // Update the state with the fetched categories
 
   }
 
@@ -59,10 +63,10 @@ function Category() {
   }, [])
   
   const handleDelete = async (categoryId) => {
-    const result = await deleteCategory(categoryId);
+    const result = await deleteCategory(categoryId);// Call the API to delete the category using id
     console.log("delete Response");
     console.log(result);
-    if (result.status === 200) {
+    if (result.status === 200) {// If the deletion is successful
       toast.success(`${categoryName} deleted`)
       getCategory();
   }
@@ -81,7 +85,7 @@ const videoDrop = async (e) => {
       {
         allCategory?.length > 0 ? 
         allCategory?.map((item) => (
-          <div key={item.id} className='m-3 border border-secondary p-3 rounded'  droppable onDrop={(e) =>videoDrop(e)}>
+          <div key={item?.id} className='m-3 border border-secondary p-3 rounded' droppable="true" onDrop={(e) => videoDrop(e)}>
             <div className='d-flex justify-content-between align-items-center'>
               <h6 className='text-white'>{item?.categoryName}</h6>
               <Button className='btn btn-danger' onClick={() => handleDelete(item?.id)}>

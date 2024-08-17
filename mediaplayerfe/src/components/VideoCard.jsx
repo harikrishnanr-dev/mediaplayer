@@ -49,6 +49,9 @@ function VideoCard({ displayVideo, setDeleteVideoStatus }) {
     }
     
   }
+
+
+  // for drag and drop
   const dragStarted = (e,id)=>{
     console.log(`video with ID ${id} started dragging`)
     e.dataTransfer.setData("videoID",id)
